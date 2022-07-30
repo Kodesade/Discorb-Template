@@ -53,7 +53,7 @@ guild_ids = Environment::GUILD_IDS
 ### For JSON file ###
 require "json" # move this to env file to centralize imports
 
-config_file = File.read('./config.json')
+config_file = File.read("./config.json")
 config = JSON.parse(config_file)
 
 token = config["token"]
@@ -79,7 +79,7 @@ $ git clone https://github.com/Kodesade/Discorb-Template.git
 add file in `commands/`, file must looks like : `hello_world.rb`.
 
 ```ruby 
-require_relative '../env'
+require_relative "../env"
 
 module HelloWorld # Same as filename as PascalCase
   NAME="command_name"
